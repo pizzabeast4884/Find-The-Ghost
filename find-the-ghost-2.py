@@ -13,7 +13,7 @@ CELL_SIZE = SCREEN_WIDTH // GRID_SIZE
 
 # Colors
 WHITE = (255, 255, 255)
-BLACK = (0, 0, 0)
+BLUE = (0, 0, 255)
 RED = (255, 0, 0)
 GREEN = (0, 255, 0)
 BLUE = (0, 0, 255)
@@ -76,13 +76,13 @@ def handle_click(pos):
 
 def display_message(message):
     """Displays a message in the center of the screen."""
-    text = font.render(message, True, BLUE)
+    text = font.render(message, True, RED)
     screen.blit(text, (SCREEN_WIDTH // 2 - text.get_width() // 2, SCREEN_HEIGHT // 2 - text.get_height() // 2))
 
 # Game loop
 running = True
 while running:
-    screen.fill(BLACK)
+    screen.fill(BLUE)
     
     # Draw the grid
     draw_grid()
